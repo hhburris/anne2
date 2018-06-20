@@ -17,6 +17,27 @@ m2a
 summary(m2a)
 plot(m2a)
 
+sex1<-(DT[DT$sexo_h00=='1',])
+sex2<-(DT[DT$sexo_h00=='2',])
+
+table (DT$sexo_h00)
+
+table (sex1$sexo_h00)
+table (sex2$sexo_h00)
+
+m1a2<-gam(sex1$Fenton_Z_score00~s(sex1$lgAST2))
+summary (m1a2)
+plot (m1a2)
+
+m1a3<-gam(sex2$Fenton_Z_score00~s(sex2$lgAST2))
+summary (m1a3)
+plot (m1a3)
+
+m1a<-gam(DT$Fenton_Z_score00~s(DT$lgAST2))
+m1a
+summary(m1a)
+
+plot(m1a)
 ?write.csv
 write.csv(DT, file ="DT.CSV")
 
