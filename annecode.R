@@ -20,4 +20,4 @@ plot(m2a)
 ?write.csv
 write.csv(DT, file ="DT.CSV")
 
-# DID THIS GO? NO STILL NO?mm  now?
+# I think I got it to sync
