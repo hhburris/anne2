@@ -36,9 +36,31 @@ plot (m1a3)
 m1a<-gam(DT$Fenton_Z_score00~s(DT$lgAST2))
 m1a
 summary(m1a)
-
 plot(m1a)
-?write.csv
-write.csv(DT, file ="DT.CSV")
 
-# I think I got it to sync
+#?write.csv
+#write.csv(DT, file ="DT.CSV")
+
+m4<-gam(DT$lgAST2~s(DT$mother_pre_bmi))
+summary (m4)
+plot(m4)
+
+m4<-gam(DT$re_AsC00~s(DT$re_PbC00))
+summary (m4)
+plot(m4)
+
+m4<-gam(DT$re_AsM2T~s(DT$re_PbM2T))
+summary (m4)
+plot(m4)
+
+#zinc and gestational age
+m5<-gam(DT$gestage_comb00~s(DT$re_ZnM2T))
+summary (m5)
+
+m5a<-gam(sex1$gestage_comb00~s(sex1$re_ZnM2T))
+summary (m5a)
+plot (m5a)
+
+m5b<-gam(sex2$gestage_comb00~s(sex2$re_ZnM2T))
+summary (m5b)
+plot (m5b)
