@@ -8,3 +8,4 @@ gam1<-gam(Fenton_Z_score00~s(logASM00)+s(mother_age2T)+s(mother_pre_bmi)+midses
           +highses +v682T +sexo_h00+smoke_inside2T , data = anne3)
 summary (gam1)
 plot (gam1)
+

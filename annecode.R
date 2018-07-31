@@ -22,6 +22,8 @@ plot(m2a)
 sex1<-(DT[DT$sexo_h00=='1',])
 sex2<-(DT[DT$sexo_h00=='2',])
 
+#
+
 table (DT$sexo_h00)
 
 table (sex1$sexo_h00)
@@ -66,3 +68,11 @@ plot (m5a)
 m5b<-gam(sex2$gestage_comb00~s(sex2$re_ZnM2T))
 summary (m5b)
 plot (m5b)
+
+#Fenton models
+m5b<-gam(DT$Fenton_Z_score00~s(sex2$re_ZnM2T))
+summary (m5b)
+plot (m5b)
+
+
+## To recreate Anne's box plots
