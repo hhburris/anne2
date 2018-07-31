@@ -17,6 +17,8 @@ m2a
 summary(m2a)
 plot(m2a)
 
+
+
 sex1<-(DT[DT$sexo_h00=='1',])
 sex2<-(DT[DT$sexo_h00=='2',])
 
