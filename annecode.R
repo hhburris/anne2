@@ -75,4 +75,28 @@ summary (m5b)
 plot (m5b)
 
 
-## To recreate Anne's box plots
+## correlation coeeficients
+names(anne5)
+
+tp3<-anne5[,c("re_AsM2T", "re_AsM00", "re_AsC00")]
+
+x<-tp3[1:3]
+
+Ccor1<-cor(x, y = NULL, use = "pairwise.complete.obs",
+            method = c("pearson")) #"spearman"))
+Ccor1
+
+Ccor2<-round(Ccor1, digits = 2)
+Ccor2
+write.csv(Ccor2, "asCor.csv")
+getwd()
+
+
+Ccor3<-cor(x, y = NULL, use = "pairwise.complete.obs",
+           method = c("spearman"))
+Ccor3
+
+Ccor4<-round(Ccor3, digits = 2)
+Ccor4
+write.csv(Ccor4, "asCor1.csv")
+getwd()
